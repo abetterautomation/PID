@@ -82,7 +82,7 @@ class PID(object):
                 return False
 
     def SetTunings(self, Kp, Ki, Kd):
-        if any([k < 0 for k in Kp, Ki, Kd]):
+        if any([k < 0 for k in (Kp, Ki, Kd)]):
             pass
         else:
             SampleTimeInSec = self.SampleTime / 1000.0
